@@ -1,5 +1,4 @@
 @import "../styles/common.scss";
-
 .navigator-menu {
     display: flex;
     margin: 0;
@@ -35,6 +34,12 @@
                 height: 35px;
                 line-height: 35px;
                 text-transform: none;
+                &.active {
+                    a {
+                        color: $colormain !important;
+                    }
+                    background-color: #ededed;
+                }
                 .menu-link {
                     text-decoration: none;
                     color: $text-in-light;
@@ -68,10 +73,6 @@
                             color: $colormain;
                         }
                     }
-                }
-                &.active span {
-                    font-weight: 500;
-                    color: $colormain;
                 }
                 &:hover {
                     background-color: darken($bg-menu-color, 3);
